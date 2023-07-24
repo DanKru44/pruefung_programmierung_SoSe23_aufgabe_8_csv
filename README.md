@@ -6,7 +6,7 @@ In diesem Repo soll eine .csv-Datei mit beliebigem Inhalt erstellt werden. Diese
 ## Kompilation
 Das Programm kann einfach mit einem beliebigen Compiler kompiliert werden. Ich hab hierfür gcc genutzt.
 
-**Wichtig: Die library [libcsv](https://github.com/rgamble/libcsv/tree/master)muss auf dem System installiert sein**
+**Wichtig: Die library [libcsv](https://github.com/rgamble/libcsv/tree/master) muss auf dem System installiert sein, sondst kann das Programm nicht kompiliert werden!**
 
 Beispiel:
 ```
