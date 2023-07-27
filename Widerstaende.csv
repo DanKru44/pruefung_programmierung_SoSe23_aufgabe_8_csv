@@ -1,4 +1,4 @@
-Name,Nenniderstand(Ohm),Toleranz(%),Leistung(Watt),Max.Spannung(Volt DC)
+Name,Nennwiderstand(Ohm),Toleranz(%),Leistung(Watt),Max.Spannung(Volt DC)
 "1/4W 1.0",1.0,5,0.25,250
 VI MBA02040C1201,1200,1,0.4,200
 ARC MRA0207 100R,100,0.1,0.25,250
