@@ -12,9 +12,9 @@ gcc main.c -o main.elf libcsv.o
 ```
 
 ## Ausführung 
-Das Programm kann einfach mit dem Befehl zum ausführen von Programmen gestartet werden. 
+Das Programm kann einfach mit dem Befehl zum ausführen von Programmen gestartet werden. Es muss eine .csv Datei mit übergeben werden. Dazu kann die im Repo vorhandene Wiederstaende.csv genutzt werden. 
 
 Beispiel für Ubuntu/WSL:
 ```
-./main.elf
+./main.elf Wiederstaende.csv
 ```
