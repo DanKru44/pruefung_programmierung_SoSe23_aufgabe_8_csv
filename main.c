@@ -1,14 +1,19 @@
 #include <stdio.h>
 #include "csv.h"
 
+#define MAX_SPALTEN 5 
+
 void feld_erkannt ( void* s , size_t len , void* daten )
 {
-	printf ( "%.*s, " , ( int )len , ( char* )s ) ;
+	printf ( "%-*.*s | " , ( int ) len , ( int ) len , ( char* ) s ) ;
 }
+
+
 void zeilen_ende ( int c ,void* daten )
 {
 	printf ( "\n" ) ;
 }
+
 
 int main (int argc , char *argv[])
 {
@@ -24,7 +29,7 @@ int main (int argc , char *argv[])
 		printf ( "Fehler beim Öffnen der Datei!\n" ) ;
 		return 1 ;
 	}
-	char buf [1024] ;
+	char buffer [1024] ;
 	size_t bytes_read ;
 	struct csv_parser parser ;
 	csv_init( &parser , CSV_APPEND_NULL ) ;
@@ -32,9 +37,9 @@ int main (int argc , char *argv[])
 	csv_set_space_func ( &parser , NULL ) ;
 	csv_set_term_func ( &parser , NULL ) ;
 
-	while ( ( bytes_read = fread( buf , 1 , 1024 , csv_datei ) ) > 0 )
+	while ( ( bytes_read = fread( buffer , 1 , 1024 , csv_datei ) ) > 0 )
 	{	
-		csv_parse ( &parser , buf , bytes_read , feld_erkannt , zeilen_ende , NULL ) ;
+		csv_parse ( &parser , buffer , bytes_read , feld_erkannt , zeilen_ende , NULL ) ;
 	}
 
 	csv_fini ( &parser , feld_erkannt , zeilen_ende , NULL ) ;
